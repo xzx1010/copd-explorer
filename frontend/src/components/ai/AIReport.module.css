@@ -1,0 +1,146 @@
+.report {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.section {
+  display: grid;
+  gap: 0.65rem;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  background: var(--color-surface);
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.subTitle {
+  margin: 0 0 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-muted);
+}
+
+.assessmentGrid {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.assessmentItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.assessmentLabel {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.assessmentValue {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.assessmentBasis {
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.list {
+  display: grid;
+  gap: 0.35rem;
+  padding: 0 0 0 1.25rem;
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.evidenceList {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.evidenceItem {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.5rem;
+  background: rgb(37 99 235 / 5%);
+}
+
+.evidenceText {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--color-text);
+}
+
+.evidenceLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+  width: fit-content;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  background: rgb(37 99 235 / 8%);
+  transition:
+    background-color 120ms ease,
+    color 120ms ease;
+}
+
+.evidenceLink:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.evidenceLink:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.evidenceInvalid {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  background: rgb(148 163 184 / 10%);
+  padding: 0.15rem 0.45rem;
+  border-radius: 0.3rem;
+  width: fit-content;
+  cursor: not-allowed;
+}
+
+.disclaimer {
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--color-pathology);
+  border-radius: 0.5rem;
+  background: rgb(231 111 81 / 6%);
+  color: var(--color-pathology);
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+
+.disclaimer p {
+  margin: 0;
+}
