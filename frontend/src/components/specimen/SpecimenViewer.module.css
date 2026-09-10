@@ -1,0 +1,60 @@
+.figure {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.stage {
+  position: relative;
+  min-height: 18rem;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background:
+    linear-gradient(135deg, rgb(226 232 240 / 70%) 25%, transparent 25%) 0 0 /
+      1rem 1rem,
+    linear-gradient(225deg, rgb(226 232 240 / 70%) 25%, transparent 25%) 0 0 /
+      1rem 1rem,
+    var(--color-background);
+}
+
+.stage[data-image-state='loaded'] {
+  min-height: 0;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.message {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: min(90%, 28rem);
+  padding: 0.85rem 1rem;
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  background: rgb(255 255 255 / 92%);
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.caption {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.empty {
+  padding: 1rem;
+  border: 1px dashed var(--color-border);
+  border-radius: 0.75rem;
+  color: var(--color-muted);
+}
