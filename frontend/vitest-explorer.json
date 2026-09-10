@@ -1,0 +1,52 @@
+{
+  "numTotalTestSuites": 2,
+  "numPassedTestSuites": 0,
+  "numFailedTestSuites": 2,
+  "numPendingTestSuites": 0,
+  "numTotalTests": 1,
+  "numPassedTests": 0,
+  "numFailedTests": 1,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "snapshot": {
+    "added": 0,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesRemovedList": [],
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 0,
+    "updated": 0,
+    "didUpdate": false
+  },
+  "startTime": 1785571823587,
+  "success": false,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["ExplorerPage"],
+          "fullName": "ExplorerPage renders the explorer shell with specimen, slide, and explanation sections",
+          "status": "failed",
+          "title": "renders the explorer shell with specimen, slide, and explanation sections",
+          "duration": 519.5735999999997,
+          "failureMessages": [
+            "TestingLibraryElementError: Unable to find an accessible element with the role \"heading\" and name `/标本区域/i`\n\nHere are the accessible roles:\n\n  region:\n\n  Name \"探索病理上下文\":\n  \u001b[36m<section\u001b[39m\n    \u001b[33maria-labelledby\u001b[39m=\u001b[32m\"explorer-title\"\u001b[39m\n    \u001b[33mclass\u001b[39m=\u001b[32m\"_page_7da551\"\u001b[39m\n  \u001b[36m/>\u001b[39m\n\n  --------------------------------------------------\n  heading:\n\n  Name \"探索病理上下文\":\n  \u001b[36m<h1\u001b[39m\n    \u001b[33mdata-page-title\u001b[39m=\u001b[32m\"true\"\u001b[39m\n    \u001b[33mid\u001b[39m=\u001b[32m\"explorer-title\"\u001b[39m\n    \u001b[33mtabindex\u001b[39m=\u001b[32m\"-1\"\u001b[39m\n  \u001b[36m/>\u001b[39m\n\n  --------------------------------------------------\n  status:\n\n  Name \"\":\n  \u001b[36m<div\u001b[39m\n    \u001b[33mclass\u001b[39m=\u001b[32m\"_status_7da551\"\u001b[39m\n    \u001b[33mrole\u001b[39m=\u001b[32m\"status\"\u001b[39m\n  \u001b[36m/>\u001b[39m\n\n  --------------------------------------------------\n\nIgnored nodes: comments, script, style\n\u001b[36m<body>\u001b[39m\n  \u001b[36m<div>\u001b[39m\n    \u001b[36m<section\u001b[39m\n      \u001b[33maria-labelledby\u001b[39m=\u001b[32m\"explorer-title\"\u001b[39m\n      \u001b[33mclass\u001b[39m=\u001b[32m\"_page_7da551\"\u001b[39m\n    \u001b[36m>\u001b[39m\n      \u001b[36m<div\u001b[39m\n        \u001b[33maria-label\u001b[39m=\u001b[32m\"路径导航\"\u001b[39m\n        \u001b[33mclass\u001b[39m=\u001b[32m\"_breadcrumb_7da551\"\u001b[39m\n      \u001b[36m>\u001b[39m\n        \u001b[36m<span\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"_breadcrumbItem_7da551\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0m探索病理上下文\u001b[0m\n        \u001b[36m</span>\u001b[39m\n      \u001b[36m</div>\u001b[39m\n      \u001b[36m<h1\u001b[39m\n        \u001b[33mdata-page-title\u001b[39m=\u001b[32m\"true\"\u001b[39m\n        \u001b[33mid\u001b[39m=\u001b[32m\"explorer-title\"\u001b[39m\n        \u001b[33mtabindex\u001b[39m=\u001b[32m\"-1\"\u001b[39m\n      \u001b[36m>\u001b[39m\n        \u001b[0m探索病理上下文\u001b[0m\n      \u001b[36m</h1>\u001b[39m\n      \u001b[36m<div\u001b[39m\n        \u001b[33mclass\u001b[39m=\u001b[32m\"_status_7da551\"\u001b[39m\n        \u001b[33mrole\u001b[39m=\u001b[32m\"status\"\u001b[39m\n      \u001b[36m>\u001b[39m\n        \u001b[0m正在加载默认内容上下文…\u001b[0m\n      \u001b[36m</div>\u001b[39m\n    \u001b[36m</section>\u001b[39m\n  \u001b[36m</div>\u001b[39m\n\u001b[36m</body>\u001b[39m\n    at Object.getElementError (D:\\code\\copd\\frontend\\node_modules\\@testing-library\\dom\\dist\\config.js:37:19)\n    at D:\\code\\copd\\frontend\\node_modules\\@testing-library\\dom\\dist\\query-helpers.js:76:38\n    at D:\\code\\copd\\frontend\\node_modules\\@testing-library\\dom\\dist\\query-helpers.js:52:17\n    at D:\\code\\copd\\frontend\\node_modules\\@testing-library\\dom\\dist\\query-helpers.js:95:19\n    at D:/code/copd/frontend/src/pages/ExplorerPage/ExplorerPage.test.tsx:16:19\n    at file:///D:/code/copd/frontend/node_modules/@vitest/runner/dist/chunk-artifact.js:302:11\n    at file:///D:/code/copd/frontend/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:26\n    at file:///D:/code/copd/frontend/node_modules/@vitest/runner/dist/chunk-artifact.js:2326:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///D:/code/copd/frontend/node_modules/@vitest/runner/dist/chunk-artifact.js:2323:10)"
+          ],
+          "meta": {},
+          "tags": []
+        }
+      ],
+      "startTime": 1785571826804,
+      "endTime": 1785571827323.5735,
+      "status": "failed",
+      "message": "",
+      "name": "D:/code/copd/frontend/src/pages/ExplorerPage/ExplorerPage.test.tsx"
+    }
+  ]
+}
