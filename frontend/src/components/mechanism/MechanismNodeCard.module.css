@@ -1,0 +1,56 @@
+.node {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  background: var(--color-surface);
+  transition:
+    border-color 120ms ease,
+    box-shadow 120ms ease;
+}
+
+.node[data-expanded='true'] {
+  border-color: var(--color-pathology);
+  box-shadow: 0 0 0 2px rgb(231 111 81 / 14%);
+}
+
+.trigger {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--color-text);
+  cursor: pointer;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-align: left;
+  transition: color 120ms ease;
+}
+
+.trigger:focus-visible {
+  outline: 2px solid var(--color-pathology);
+  outline-offset: 2px;
+  border-radius: 0.3rem;
+}
+
+.arrow {
+  flex-shrink: 0;
+  width: 1.1rem;
+  color: var(--color-pathology);
+  font-size: 0.8rem;
+}
+
+.nodeTitle {
+  flex: 1;
+}
+
+.description {
+  margin: 0;
+  padding: 0.5rem 0 0 1.6rem;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  line-height: 1.65;
+}
