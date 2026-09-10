@@ -1,0 +1,15 @@
+# Recovery artifacts
+.recovery/
+.gh-config/
+
+# Local environments and caches
+.venv/
+.venv-*/
+.vite/
+
+# OS / editor files
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/
