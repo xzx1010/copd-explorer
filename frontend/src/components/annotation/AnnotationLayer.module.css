@@ -1,0 +1,70 @@
+.layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.empty {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: min(85%, 22rem);
+  padding: 0.65rem 1rem;
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background: rgb(255 255 255 / 90%);
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.marker {
+  position: absolute;
+  display: flex;
+  min-width: 2rem;
+  min-height: 2rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0.25rem 0.35rem;
+  overflow: visible;
+  border: 2px solid var(--color-annotation);
+  border-radius: 0.5rem;
+  background: rgb(147 51 234 / 14%);
+  color: var(--color-text);
+  cursor: pointer;
+  pointer-events: auto;
+  text-align: left;
+  transition:
+    border-color 120ms ease,
+    background-color 120ms ease,
+    box-shadow 120ms ease,
+    transform 120ms ease;
+}
+
+.marker:hover,
+.marker:focus-visible {
+  z-index: 2;
+  border-color: var(--color-annotation);
+  background: rgb(147 51 234 / 26%);
+  box-shadow: 0 0 0 3px rgb(147 51 234 / 20%);
+  transform: scale(1.02);
+}
+
+.marker[data-selected='true'] {
+  z-index: 3;
+  border-width: 3px;
+  border-color: var(--color-annotation);
+  background: rgb(147 51 234 / 34%);
+  box-shadow: 0 0 0 4px rgb(147 51 234 / 24%);
+}
+
+.label {
+  max-width: 100%;
+  padding: 0.12rem 0.3rem;
+  border-radius: 0.3rem;
+  background: var(--color-surface);
+  font-size: 0.7rem;
+  font-weight: 800;
+  line-height: 1.25;
+  white-space: nowrap;
+}
