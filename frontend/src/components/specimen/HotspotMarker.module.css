@@ -1,0 +1,68 @@
+.marker {
+  position: absolute;
+  display: flex;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0.35rem;
+  overflow: visible;
+  border: 2px solid var(--color-pathology);
+  border-radius: 0.65rem;
+  background: rgb(231 111 81 / 16%);
+  color: var(--color-text);
+  cursor: pointer;
+  text-align: left;
+  transition:
+    border-color 120ms ease,
+    background-color 120ms ease,
+    box-shadow 120ms ease,
+    transform 120ms ease;
+}
+
+.marker:hover,
+.marker:focus-visible {
+  z-index: 2;
+  border-color: var(--color-primary);
+  background: rgb(37 99 235 / 18%);
+  box-shadow: 0 0 0 3px rgb(37 99 235 / 18%);
+  transform: scale(1.02);
+}
+
+.marker[data-selected='true'] {
+  z-index: 3;
+  border-width: 3px;
+  border-color: var(--color-primary);
+  background: rgb(37 99 235 / 28%);
+  box-shadow: 0 0 0 4px rgb(37 99 235 / 22%);
+}
+
+.marker:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.label {
+  max-width: 100%;
+  padding: 0.15rem 0.3rem;
+  border-radius: 0.3rem;
+  background: var(--color-surface);
+  font-size: 0.75rem;
+  font-weight: 800;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.selectedText {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.25rem;
+  padding: 0.15rem 0.3rem;
+  border-radius: 0.3rem;
+  background: var(--color-primary);
+  color: var(--color-surface);
+  font-size: 0.7rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
