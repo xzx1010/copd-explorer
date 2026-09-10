@@ -10,6 +10,7 @@ import { defaultContentBundle } from '../../data/content'
 import { aiService } from '../../services/aiService'
 import { useAIStore } from '../../stores/aiStore'
 import type { AIAnalyzeRequest, AIResult } from '../../types/ai'
+import type { AppError } from '../../types/error'
 import styles from './AIDiagnosisPage.module.css'
 
 type PageStatus = 'idle' | 'loading' | 'success' | 'error'
@@ -89,9 +90,13 @@ export default function AIDiagnosisPage() {
         setLastResult(result)
         setStatus('success')
       } catch (error) {
-        setErrorMessage(
-          error instanceof Error ? error.message : '分析请求失败，请重试。',
-        )
+        const message =
+          error && typeof error === 'object' && 'message' in error
+            ? String((error as AppError).message)
+            : error instanceof Error
+              ? error.message
+              : '分析请求失败，请重试。'
+        setErrorMessage(message)
         setStatus('error')
       }
     },
