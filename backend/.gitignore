@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+.venv/
+venv/
+
+# Environment (may contain secrets)
+.env
+
+# IDE / editor
+.vscode/
+.idea/
+
+# Testing
+.pytest_cache/
+htmlcov/
+
+# Type checking
+.mypy_cache/
+
+# OS
+Thumbs.db
+Desktop.ini
