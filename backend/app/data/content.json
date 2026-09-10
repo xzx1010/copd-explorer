@@ -1,0 +1,278 @@
+{
+  "home": {
+    "title": "基于证据的 COPD 病理学习",
+    "subtitle": "以标本、切片、标注、机制与临床串联起一条可追溯的学习路径。",
+    "learningPath": [
+      {
+        "id": "anchor_specimen",
+        "type": "specimen",
+        "name": "标本概览",
+        "links": { "slide": "anchor_slide_1" }
+      },
+      {
+        "id": "anchor_slide_1",
+        "type": "slide",
+        "name": "切片概览",
+        "links": { "annotation": "anchor_annotation_1" }
+      },
+      {
+        "id": "anchor_annotation_1",
+        "type": "annotation",
+        "name": "标注解释",
+        "links": { "mechanism": "anchor_mechanism_1" }
+      },
+      {
+        "id": "anchor_mechanism_1",
+        "type": "mechanism",
+        "name": "机制总结",
+        "links": { "clinical": "anchor_clinical_1" }
+      }
+    ]
+  },
+  "specimens": [
+    {
+      "id": "specimen_1",
+      "type": "specimen",
+      "title": "支气管组织标本",
+      "image": "/content/placeholder.svg",
+      "altText": "支气管组织标本占位图",
+      "hotspots": ["hotspot_1", "hotspot_2", "hotspot_3"]
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "hotspot_1",
+      "label": "气道狭窄",
+      "anchor": "anchor_annotation_1",
+      "x": 0.2,
+      "y": 0.3,
+      "width": 0.2,
+      "height": 0.2
+    },
+    {
+      "id": "hotspot_2",
+      "label": "黏液堵塞",
+      "anchor": "anchor_annotation_2",
+      "x": 0.45,
+      "y": 0.42,
+      "width": 0.2,
+      "height": 0.18
+    },
+    {
+      "id": "hotspot_3",
+      "label": "肺泡壁损失",
+      "anchor": "anchor_annotation_3",
+      "x": 0.68,
+      "y": 0.25,
+      "width": 0.18,
+      "height": 0.2
+    }
+  ],
+  "slides": [
+    {
+      "id": "slide_1",
+      "type": "slide",
+      "title": "低倍组织学切片",
+      "image": "/content/placeholder.svg",
+      "altText": "低倍组织学切片占位图",
+      "anchor": "anchor_slide_1"
+    },
+    {
+      "id": "slide_2",
+      "type": "slide",
+      "title": "高倍气道细节",
+      "image": "/content/placeholder.svg",
+      "altText": "高倍气道细节占位图",
+      "anchor": "anchor_slide_2"
+    },
+    {
+      "id": "slide_3",
+      "type": "slide",
+      "title": "肺气肿模式概览",
+      "image": "/content/placeholder.svg",
+      "altText": "肺气肿模式概览占位图",
+      "anchor": "anchor_slide_3"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "annotation_1",
+      "type": "annotation",
+      "name": "气道狭窄",
+      "description": "气道腔被炎症和黏液堵塞所缩窄。",
+      "anchor": "anchor_annotation_1",
+      "slidePosition": { "x": 0.15, "y": 0.2, "width": 0.25, "height": 0.25 },
+      "links": {
+        "specimen": "anchor_specimen",
+        "slide": "anchor_slide_1",
+        "mechanism": "anchor_mechanism_1",
+        "clinical": "anchor_clinical_1"
+      }
+    },
+    {
+      "id": "annotation_2",
+      "type": "annotation",
+      "name": "黏液堵塞",
+      "description": "黏液积聚和杯状细胞增生较为明显。",
+      "anchor": "anchor_annotation_2",
+      "slidePosition": { "x": 0.4, "y": 0.35, "width": 0.25, "height": 0.2 },
+      "links": {
+        "specimen": "anchor_specimen",
+        "slide": "anchor_slide_2",
+        "mechanism": "anchor_mechanism_2",
+        "clinical": "anchor_clinical_2"
+      }
+    },
+    {
+      "id": "annotation_3",
+      "type": "annotation",
+      "name": "肺泡壁损失",
+      "description": "肺泡隔膜被破坏，腔隙变得扩大。",
+      "anchor": "anchor_annotation_3",
+      "slidePosition": { "x": 0.55, "y": 0.15, "width": 0.25, "height": 0.25 },
+      "links": {
+        "specimen": "anchor_specimen",
+        "slide": "anchor_slide_3",
+        "mechanism": "anchor_mechanism_3",
+        "clinical": "anchor_clinical_2"
+      }
+    }
+  ],
+  "mechanisms": [
+    {
+      "id": "mechanism_1",
+      "type": "mechanism",
+      "title": "慢性炎症",
+      "anchor": "anchor_mechanism_1",
+      "summary": "细胞损伤会推动气道狭窄和黏液过度产生。",
+      "nodes": [
+        {
+          "id": "node_1",
+          "title": "炎症",
+          "description": "反复刺激会增加免疫细胞活性。"
+        },
+        {
+          "id": "node_2",
+          "title": "黏液",
+          "description": "杯状细胞化生会产生过多黏液。"
+        }
+      ]
+    },
+    {
+      "id": "mechanism_2",
+      "type": "mechanism",
+      "title": "气流阻塞",
+      "anchor": "anchor_mechanism_2",
+      "summary": "阻塞会减慢呼气流量并加重症状。",
+      "nodes": [
+        {
+          "id": "node_3",
+          "title": "阻塞",
+          "description": "堵塞会缩窄腔道并增加阻力。"
+        }
+      ]
+    },
+    {
+      "id": "mechanism_3",
+      "type": "mechanism",
+      "title": "实质破坏",
+      "anchor": "anchor_mechanism_3",
+      "summary": "弹性组织损失会导致肺过度膨胀和呼吸困难。",
+      "nodes": [
+        {
+          "id": "node_4",
+          "title": "弹性回缩丧失",
+          "description": "气道失去支撑并在呼气时塌陷。"
+        }
+      ]
+    }
+  ],
+  "clinical": [
+    {
+      "id": "clinical_1",
+      "type": "clinical",
+      "title": "慢性咳痰",
+      "anchor": "anchor_clinical_1",
+      "summary": "症状常包括持续咳嗽和痰液产生。",
+      "impact": "疲劳和呼吸短促会影响日常活动。",
+      "symptoms": ["慢性咳嗽", "痰液增多", "气短"],
+      "treatment": ["支气管扩张剂治疗", "戒烟"],
+      "prevention": ["避免吸烟暴露", "坚持吸入器治疗"]
+    },
+    {
+      "id": "clinical_2",
+      "type": "clinical",
+      "title": "运动受限",
+      "anchor": "anchor_clinical_2",
+      "summary": "患者常报告运动耐受下降和劳力性呼吸困难。",
+      "impact": "步行和爬楼会变得困难。",
+      "symptoms": ["劳力性呼吸困难", "耐力下降"],
+      "treatment": ["肺康复", "运动训练"],
+      "prevention": ["规律运动", "症状监测"]
+    }
+  ],
+  "anchors": [
+    {
+      "id": "anchor_specimen",
+      "type": "specimen",
+      "name": "标本概览",
+      "links": { "slide": "anchor_slide_1" }
+    },
+    {
+      "id": "anchor_slide_1",
+      "type": "slide",
+      "name": "低倍概览",
+      "links": { "annotation": "anchor_annotation_1" }
+    },
+    {
+      "id": "anchor_slide_2",
+      "type": "slide",
+      "name": "气道细节",
+      "links": { "annotation": "anchor_annotation_2" }
+    },
+    {
+      "id": "anchor_slide_3",
+      "type": "slide",
+      "name": "实质细节",
+      "links": { "annotation": "anchor_annotation_3" }
+    },
+    {
+      "id": "anchor_annotation_1",
+      "type": "annotation",
+      "name": "气道狭窄",
+      "links": { "mechanism": "anchor_mechanism_1", "clinical": "anchor_clinical_1" }
+    },
+    {
+      "id": "anchor_annotation_2",
+      "type": "annotation",
+      "name": "黏液堵塞",
+      "links": { "mechanism": "anchor_mechanism_2", "clinical": "anchor_clinical_2" }
+    },
+    {
+      "id": "anchor_annotation_3",
+      "type": "annotation",
+      "name": "肺泡壁损失",
+      "links": { "mechanism": "anchor_mechanism_3" }
+    },
+    {
+      "id": "anchor_mechanism_1",
+      "type": "mechanism",
+      "name": "慢性炎症",
+      "links": { "clinical": "anchor_clinical_1" }
+    },
+    {
+      "id": "anchor_mechanism_2",
+      "type": "mechanism",
+      "name": "气流阻塞",
+      "links": { "clinical": "anchor_clinical_2" }
+    },
+    {
+      "id": "anchor_mechanism_3",
+      "type": "mechanism",
+      "name": "实质破坏",
+      "links": { "clinical": "anchor_clinical_2" }
+    },
+    { "id": "anchor_clinical_1", "type": "clinical", "name": "慢性咳痰" },
+    { "id": "anchor_clinical_2", "type": "clinical", "name": "运动受限" }
+  ]
+}
