@@ -1,0 +1,53 @@
+.container {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1.25rem 1rem;
+  border: 1px solid var(--color-pathology);
+  border-radius: 0.75rem;
+  background: rgb(231 111 81 / 6%);
+}
+
+.header {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.code {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-pathology);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.message {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.retryButton {
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--color-pathology);
+  border-radius: 0.5rem;
+  background: rgb(231 111 81 / 10%);
+  color: var(--color-pathology);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+  transition:
+    background-color 120ms ease,
+    color 120ms ease;
+}
+
+.retryButton:hover {
+  background: var(--color-pathology);
+  color: #fff;
+}
+
+.retryButton:focus-visible {
+  outline: 2px solid var(--color-pathology);
+  outline-offset: 2px;
+}
