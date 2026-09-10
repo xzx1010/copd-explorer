@@ -1,0 +1,22 @@
+.page {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: clamp(1rem, 5vw, 3rem) 0;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: var(--color-primary);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.description {
+  max-width: 40rem;
+  margin: 1rem 0 0;
+  color: var(--color-muted);
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
