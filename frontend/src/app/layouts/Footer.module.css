@@ -1,0 +1,21 @@
+.footer {
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-muted);
+  font-size: 0.875rem;
+}
+
+.inner {
+  display: flex;
+  width: min(100%, 76rem);
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 auto;
+  padding: 1.25rem var(--space-page);
+}
+
+@media (max-width: 480px) {
+  .inner {
+    flex-direction: column;
+  }
+}
