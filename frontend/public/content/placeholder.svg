@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">COPD 病理标本示意图</title>
+  <desc id="desc">用于开发阶段的肺部组织示意图占位资源</desc>
+  <rect width="1200" height="760" fill="#e2e8f0"/>
+  <ellipse cx="370" cy="390" rx="240" ry="180" fill="#f2b5a2" stroke="#c95f48" stroke-width="12"/>
+  <ellipse cx="820" cy="390" rx="240" ry="180" fill="#f2b5a2" stroke="#c95f48" stroke-width="12"/>
+  <path d="M600 175v430M600 250c-95 0-160 55-220 125M600 250c95 0 160 55 220 125" fill="none" stroke="#64748b" stroke-width="22" stroke-linecap="round"/>
+  <path d="M210 390h320M670 390h320" stroke="#fff" stroke-width="24" stroke-linecap="round" opacity=".8"/>
+</svg>
