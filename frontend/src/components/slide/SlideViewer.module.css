@@ -1,0 +1,146 @@
+.figure {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.viewer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background:
+    linear-gradient(135deg, rgb(226 232 240 / 60%) 25%, transparent 25%) 0 0 /
+      1rem 1rem,
+    linear-gradient(225deg, rgb(226 232 240 / 60%) 25%, transparent 25%) 0 0 /
+      1rem 1rem,
+    var(--color-background);
+  outline: none;
+}
+
+.viewer:focus-visible {
+  box-shadow: 0 0 0 3px rgb(37 99 235 / 28%);
+}
+
+.viewer[data-image-state='error'] {
+  aspect-ratio: auto;
+  min-height: 12rem;
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: 0 0;
+  will-change: transform;
+  visibility: hidden;
+}
+
+.canvas[data-visible='true'] {
+  visibility: visible;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.message {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: min(90%, 22rem);
+  padding: 1rem 1.25rem;
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  background: rgb(255 255 255 / 94%);
+  color: var(--color-muted);
+  text-align: center;
+  display: grid;
+  gap: 0.65rem;
+  justify-items: center;
+}
+
+.message p {
+  margin: 0;
+}
+
+.retryButton {
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 0.5rem;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 120ms ease;
+}
+
+.retryButton:hover {
+  opacity: 0.9;
+}
+
+.retryButton:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.controlButton {
+  min-width: 2.75rem;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    border-color 120ms ease,
+    background-color 120ms ease;
+}
+
+.controlButton:hover:not(:disabled) {
+  border-color: var(--color-primary);
+  background: rgb(37 99 235 / 8%);
+}
+
+.controlButton:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.controlButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.empty {
+  padding: 1rem;
+  border: 1px dashed var(--color-border);
+  border-radius: 0.75rem;
+  color: var(--color-muted);
+}
