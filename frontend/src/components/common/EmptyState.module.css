@@ -1,0 +1,14 @@
+.container {
+  padding: 1.25rem 1rem;
+  border: 1px dashed var(--color-border);
+  border-radius: 0.75rem;
+  background: rgb(148 163 184 / 5%);
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.message {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
