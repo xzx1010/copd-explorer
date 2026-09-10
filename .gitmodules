@@ -1,0 +1,5 @@
+[submodule "docs"]
+	path = docs
+	url = https://github.com/xzx1010/docs.git
+	branch = master
+
