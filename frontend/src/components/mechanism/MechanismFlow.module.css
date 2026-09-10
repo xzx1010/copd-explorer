@@ -1,0 +1,30 @@
+.flow {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.summary {
+  margin: 0;
+  color: var(--color-muted);
+  line-height: 1.7;
+}
+
+.nodes {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.empty {
+  padding: 1rem;
+  border: 1px dashed var(--color-border);
+  border-radius: 0.75rem;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
