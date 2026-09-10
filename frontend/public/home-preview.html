@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COPD Explorer 首页预览</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family:
+          Inter,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          'Segoe UI',
+          sans-serif;
+      }
+      body {
+        margin: 0;
+        background: #f8fafc;
+        color: #0f172a;
+      }
+      .page {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 24px;
+        display: grid;
+        gap: 20px;
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 16px;
+        align-items: start;
+      }
+      .card {
+        background: white;
+        border: 1px solid #dbe4f0;
+        border-radius: 16px;
+        padding: 20px;
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+      }
+      .eyebrow {
+        margin: 0 0 8px;
+        color: #2563eb;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+      }
+      .description {
+        margin-top: 12px;
+        line-height: 1.7;
+        color: #334155;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 18px;
+      }
+      .action {
+        display: inline-block;
+        padding: 10px 14px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .primary {
+        background: #0f172a;
+        color: white;
+      }
+      .secondary {
+        border: 1px solid #cbd5e1;
+        color: #0f172a;
+        background: white;
+      }
+      .path-list,
+      .capabilities-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 10px;
+      }
+      .path-item,
+      .capability-item {
+        display: flex;
+        gap: 12px;
+        align-items: start;
+        padding: 12px;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        background: #fff;
+      }
+      .index {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 999px;
+        background: #dbeafe;
+        color: #1d4ed8;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      @media (max-width: 720px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="card">
+          <p class="eyebrow">COPD 病理学习</p>
+          <h1>基于证据的 COPD 病理学习</h1>
+          <p class="description">
+            以标本、切片、标注、机制与临床串联起一条可追溯的学习路径。
+          </p>
+          <div class="actions">
+            <a class="action primary" href="/explorer">开始探索</a>
+            <a class="action secondary" href="/mechanism">查看机制路径</a>
+          </div>
+        </div>
+        <aside class="card">
+          <h2>医学提示</h2>
+          <p class="description">
+            本体验仅用于教育与学习，需结合专业临床判断使用。
+          </p>
+        </aside>
+      </section>
+
+      <section class="card">
+        <p class="eyebrow">学习路径</p>
+        <h2>四步引导式学习流</h2>
+        <ol class="path-list">
+          <li class="path-item">
+            <span class="index">1</span>
+            <div>
+              <h3>标本概览</h3>
+              <p>标本</p>
+            </div>
+          </li>
+          <li class="path-item">
+            <span class="index">2</span>
+            <div>
+              <h3>切片概览</h3>
+              <p>切片</p>
+            </div>
+          </li>
+          <li class="path-item">
+            <span class="index">3</span>
+            <div>
+              <h3>标注解释</h3>
+              <p>标注</p>
+            </div>
+          </li>
+          <li class="path-item">
+            <span class="index">4</span>
+            <div>
+              <h3>机制总结</h3>
+              <p>机制</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="card">
+        <p class="eyebrow">核心能力</p>
+        <h2>面向证据驱动教学的设计</h2>
+        <ul class="capabilities-list">
+          <li class="capability-item">从标本到临床的证据链叙事</li>
+          <li class="capability-item">基于热区的病理发现导航</li>
+          <li class="capability-item">机制与临床卡片的深度解读</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
