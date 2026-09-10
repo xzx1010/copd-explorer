@@ -1,0 +1,28 @@
+.page {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: clamp(1rem, 5vw, 3rem) 0;
+}
+
+.code {
+  margin: 0 0 0.75rem;
+  color: var(--color-pathology);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.page p:not(.code) {
+  max-width: 36rem;
+  margin: 1rem 0 0;
+  color: var(--color-muted);
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.link {
+  display: inline-flex;
+  margin-top: 1.5rem;
+  color: var(--color-primary);
+  font-weight: 700;
+}
