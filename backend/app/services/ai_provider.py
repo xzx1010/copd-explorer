@@ -121,9 +121,15 @@ class MockAIProvider:
 # ---------------------------------------------------------------------------
 
 class DeepSeekProvider:
-    def __init__(self, api_key: str, timeout_seconds: int = 30) -> None:
+    def __init__(
+        self,
+        api_key: str,
+        timeout_seconds: int = 30,
+        allowed_anchor_ids: list[str] | None = None,
+    ) -> None:
         self._api_key = api_key
         self._timeout = timeout_seconds
+        self._allowed_anchor_ids = allowed_anchor_ids or []
 
     async def analyze(self, request: AIAnalyzeRequest) -> AIResult:
         if not self._api_key:
@@ -169,6 +175,7 @@ class DeepSeekProvider:
         schema.  The schema itself is described in Chinese so the model emits
         stable fields; no real patient identity is ever sent by the frontend.
         """
+        allowed_anchors = ", ".join(self._allowed_anchor_ids)
         system_prompt = (
             "你是 COPD 病理教学助手。请根据用户提供的病史、症状、检查结果和病理"
             "上下文，输出一个 JSON 对象，字段必须与以下结构完全一致："
@@ -178,7 +185,8 @@ class DeepSeekProvider:
             '"differential":["..."],"recommendation":["..."],'
             '"disclaimer":"..."}。'
             "likelihood 只能是 low/medium/high/unknown；confidence 是 0 到 1 的教学提示；"
-            "evidence 至少一项且 anchorId 必须引用真实存在的标注 Anchor；"
+            "evidence 至少一项且 anchorId 必须从以下白名单中选择，不能改写、创造或猜测 Anchor ID："
+            f"[{allowed_anchors}]。"
             "disclaimer 必须包含教学免责声明，不得表述为真实临床诊断。只返回 JSON，不要任何额外文字。"
         )
         user_prompt = json.dumps(
