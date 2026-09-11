@@ -249,6 +249,10 @@ class ContentRepository:
     def has_anchor(self, anchor_id: str) -> bool:
         return any(a.id == anchor_id for a in self._bundle.anchors)
 
+    def anchor_ids(self) -> list[str]:
+        """Return the validated anchor IDs available for AI evidence links."""
+        return [anchor.id for anchor in self._bundle.anchors]
+
     def set_test_bundle(self, bundle: ContentBundle) -> None:
         """Replace the internal bundle (for tests only)."""
         self._bundle = bundle
