@@ -1,5 +1,6 @@
 import { useState } from 'react'
 
+import { resolveAssetUrl } from '../../services/assetUrl'
 import type { HotspotData, SpecimenData } from '../../types/content'
 import { HotspotMarker } from './HotspotMarker'
 import styles from './SpecimenViewer.module.css'
@@ -19,7 +20,7 @@ export function SpecimenViewer({
   selectedAnchor = null,
   onSelectHotspot,
 }: SpecimenViewerProps) {
-  const imageSource = specimen?.image ?? null
+  const imageSource = specimen ? resolveAssetUrl(specimen.image) : null
   const [imageStatus, setImageStatus] = useState<{
     source: string | null
     state: ImageState
@@ -55,7 +56,7 @@ export function SpecimenViewer({
           onLoad={() =>
             setImageStatus({ source: imageSource, state: 'loaded' })
           }
-          src={specimen.image}
+          src={imageSource ?? undefined}
         />
         {imageState === 'loaded' && (
           <div className={styles.overlay} aria-label="标本热区">
