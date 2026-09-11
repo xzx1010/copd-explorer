@@ -13,6 +13,7 @@ export interface CaseFormData {
 
 interface CaseInputFormProps {
   initialData?: CaseFormData
+  formKey?: string
   disabled?: boolean
   onSubmit: (data: CaseFormData) => void
 }
@@ -32,6 +33,7 @@ const emptyForm: CaseFormData = {
 
 export function CaseInputForm({
   initialData = emptyForm,
+  formKey,
   disabled = false,
   onSubmit,
 }: CaseInputFormProps) {
@@ -79,7 +81,12 @@ export function CaseInputForm({
     form.symptoms.trim()
 
   return (
-    <form className={styles.form} noValidate onSubmit={handleSubmit}>
+    <form
+      className={styles.form}
+      data-form-key={formKey}
+      noValidate
+      onSubmit={handleSubmit}
+    >
       <p className={styles.privacyNotice}>
         ⚠️
         请勿输入可识别真实患者身份的信息（如姓名、身份证号、住院号等）。本工具仅供教学练习使用。
