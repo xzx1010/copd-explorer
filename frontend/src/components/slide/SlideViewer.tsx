@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 
+import { resolveAssetUrl } from '../../services/assetUrl'
 import type { AnnotationData, SlideData } from '../../types/content'
 import { AnnotationLayer } from '../annotation/AnnotationLayer'
 import styles from './SlideViewer.module.css'
@@ -39,6 +40,7 @@ export function SlideViewer({
   } | null>(null)
 
   const slideKey = slide?.id ?? 'empty'
+  const imageSource = slide ? resolveAssetUrl(slide.image) : null
   const [viewState, setViewState] = useState({
     slideKey,
     zoom: MIN_ZOOM,
@@ -209,10 +211,10 @@ export function SlideViewer({
   const handleRetry = useCallback(() => {
     setViewState((prev) => ({ ...prev, slideKey, imageState: 'loading' }))
     // Force image reload by appending a cache-busting query
-    if (imageRef.current && slide) {
-      imageRef.current.src = slide.image
+    if (imageRef.current && imageSource) {
+      imageRef.current.src = imageSource
     }
-  }, [slide, slideKey])
+  }, [imageSource, slideKey])
 
   const isZoomed = zoom > MIN_ZOOM
 
@@ -254,7 +256,7 @@ export function SlideViewer({
             onLoad={handleImageLoad}
             onMouseDown={handleMouseDown}
             ref={imageRef}
-            src={slide.image}
+            src={imageSource ?? undefined}
             style={{
               cursor: isZoomed ? (dragging ? 'grabbing' : 'grab') : 'default',
             }}
