@@ -29,6 +29,7 @@ class AIService:
             return DeepSeekProvider(
                 api_key=self._settings.deepseek_api_key,
                 timeout_seconds=self._settings.ai_timeout_seconds,
+                allowed_anchor_ids=self._repo.anchor_ids(),
             )
         # Default (mock) – deterministic teaching fixture
         return MockAIProvider()
