@@ -44,3 +44,26 @@ h1 {
     min-width: 44px;
   }
 }
+
+@media print {
+  body.printing-ai-report {
+    background: #fff;
+  }
+
+  body.printing-ai-report header,
+  body.printing-ai-report footer,
+  body.printing-ai-report nav,
+  body.printing-ai-report [data-print-hide='true'],
+  body.printing-ai-report .skipLink {
+    display: none !important;
+  }
+
+  body.printing-ai-report main {
+    width: 100%;
+    padding: 0;
+  }
+
+  body.printing-ai-report [data-print-report='true'] {
+    display: block;
+  }
+}
